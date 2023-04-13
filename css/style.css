@@ -45,7 +45,9 @@ body {
 }
 @media (max-width: 550px) {
     .warning span {
-        display: inline-block;
+        display: block;
+        margin-bottom: 30px;
+        border: none;
     }
 }
 @keyframes animation {
