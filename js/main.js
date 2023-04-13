@@ -15,8 +15,8 @@ fetch(
             let euroCr = (currency.rates["EUR"] * amount.value).toFixed(2);
             let egpCr = (currency.rates["EGP"] * amount.value).toFixed(2);
             let sarCr = (currency.rates["SAR"] * amount.value).toFixed(2);
-            EGP.innerHTML = egpCr;
-            EUR.innerHTML = euroCr;
-            SAR.innerHTML = sarCr;
+            EGP.innerHTML = `${egpCr} جنيه مصري`;
+            EUR.innerHTML = ` ${euroCr} يورو`;
+            SAR.innerHTML = `${sarCr} ريال سعودي`;
         };
     });
