@@ -12,11 +12,14 @@ fetch(
         let SAR = document.querySelector(".SAR span");
         let btn = document.getElementById("btn");
         btn.onclick = () => {
-            let euroCr = (currency.rates["EUR"] * amount.value).toFixed(2);
-            let egpCr = (currency.rates["EGP"] * amount.value).toFixed(2);
-            let sarCr = (currency.rates["SAR"] * amount.value).toFixed(2);
+            let euroEgy = currency.rates["EGP"] / currency.rates["EUR"];
+            let euroSar = currency.rates["SAR"] / currency.rates["EUR"];
+            let egpCr = (euroEgy * amount.value).toFixed(2);
+            let sarCr = (euroSar * amount.value).toFixed(2); // let euroCr = (currency.rates["EUR"] * amount.value).toFixed(2);
+            // let egpCr = (currency.rates["EGP"] * amount.value).toFixed(2);
+            // let sarCr = (currency.rates["SAR"] * amount.value).toFixed(2);
             EGP.innerHTML = `${egpCr} جنيه مصري`;
-            EUR.innerHTML = ` ${euroCr} يورو`;
+            // EUR.innerHTML = ` ${euroCr} يورو`;
             SAR.innerHTML = `${sarCr} ريال سعودي`;
         };
     });
